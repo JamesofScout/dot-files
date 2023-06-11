@@ -22,9 +22,9 @@
 
   programs.fish.enable=true;
   programs.fish.interactiveShellInit="starship init fish | source";
-  home.shellAliases= {
-    ls = "lsd"
-    gs = "git status"
+  home.shellAliases = {
+    ls = "lsd";
+    gs = "git status";
   };
   
   programs.vscode = {
