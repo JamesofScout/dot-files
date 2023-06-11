@@ -1,4 +1,4 @@
-{ config, pkgs, ...} : {
+{ config, pkgs, services, ...} : {
   home.username = "florian";
   home.homeDirectory = "/home/florian";
   
@@ -10,11 +10,10 @@
   };
 
   home.packages = with pkgs; [
+    wcm
     waybar
     btop
-    kanata
     emacs
-    em
     alacritty
   ];
 
@@ -30,4 +29,6 @@
       jnoortheen.nix-ide
     ];
   };
+
+  services.kanata.enable = true;
 }
