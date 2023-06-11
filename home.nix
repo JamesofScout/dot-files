@@ -21,6 +21,7 @@
   # programs.thunderbird.enable = true;
 
   programs.fish.enable=true;
+  programs.fish.interactiveShellInit="starship init fish | source";
 
 
   programs.vscode = {
