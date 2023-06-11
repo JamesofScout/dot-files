@@ -1,0 +1,11 @@
+
+;; Process unmapped keys as well
+(defcfg process-unmapped-keys yes)
+
+(defsrc caps)
+
+(deflayer default @cap)
+
+(defalias 
+  cap (tap-hold-press 200 200 caps lctl)
+)

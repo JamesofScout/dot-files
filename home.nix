@@ -15,6 +15,7 @@
     btop
     emacs
     alacritty
+    kanata
   ];
 
   # programs.thunderbird.enable = true;
@@ -30,5 +31,12 @@
     ];
   };
 
-  services.kanata.enable = true;
+  systemd.user.services.kanata = {
+    Unit.Description = "Kanata Keyboard Manager";
+    Install.WantedBy=["default.target"];
+    Service = {
+      Restart="always";
+      ExecStart = "${pkgs.kanata}/bin/kanata --cfg /home/florian/.config/home-manager/kanata.kbd";
+    };
+  };
 }
