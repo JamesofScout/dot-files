@@ -19,7 +19,9 @@
   ];
 
   # programs.thunderbird.enable = true;
-          
+
+  programs.fish.enable=true;
+
 
   programs.vscode = {
     enable = true;
