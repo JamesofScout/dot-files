@@ -8,6 +8,7 @@
   imports = [
     ./editor/intelij.nix
     ./editor/emacs.nix
+    ./editor/codium.nix
   ];
 
   home.stateVersion = "23.05";
