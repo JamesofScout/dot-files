@@ -7,6 +7,7 @@
   };
   imports = [
     ./editor/intelij.nix
+    ./editor/emacs.nix
   ];
 
   home.stateVersion = "23.05";
@@ -19,10 +20,6 @@
     wcm
     waybar
     btop
-    ((emacsPackagesFor emacs).emacsWithPackages (epkgs:
-      [ epkgs.tree-sitter
-        epkgs.tree-sitter-langs
-        epkgs.nix-mode]))
     alacritty
     kanata
   ];
@@ -34,16 +31,6 @@
   home.shellAliases = {
     ls = "lsd";
     gs = "git status";
-  };
-  
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscodium;
-    extensions = with pkgs.vscode-extensions; [
-      zhuangtongfa.material-theme
-      rust-lang.rust-analyzer
-      jnoortheen.nix-ide
-    ];
   };
 
   systemd.user.services.kanata = {
