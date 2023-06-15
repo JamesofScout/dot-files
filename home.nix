@@ -1,7 +1,13 @@
 { config, pkgs, services, ...} : {
   home.username = "florian";
   home.homeDirectory = "/home/florian";
-  
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = (_: true);
+  };
+  imports = [
+    ./editor/intelij.nix
+  ];
 
   home.stateVersion = "23.05";
 
