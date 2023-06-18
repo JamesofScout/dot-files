@@ -14,12 +14,13 @@
   home.stateVersion = "23.05";
 
   programs.home-manager = {
-    enable = true;
+    enable = true
   };
 
   home.packages = with pkgs; [
-    wcm
+    wired-notify
     waybar
+    wcm
     btop
     alacritty
     kanata
