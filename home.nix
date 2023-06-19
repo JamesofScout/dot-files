@@ -18,6 +18,8 @@
   };
 
   home.packages = with pkgs; [
+    eww-wayland
+    dunst
     wcm
     waybar
     btop
