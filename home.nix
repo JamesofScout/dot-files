@@ -19,6 +19,7 @@
 
   home.packages = with pkgs; [
     eww-wayland
+    tmux
     dunst
     wcm
     waybar
