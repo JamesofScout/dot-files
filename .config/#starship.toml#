@@ -1,0 +1,252 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Which is equivalent to
+format = """
+$sudo\
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$buf\
+$c\
+$cmake\
+$cobol\
+$container\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$haskell\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
+
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character] # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[➜](bold red)"
+
+[status]
+disabled = false
+map_symbol = true
+sigint_symbol = "🧱"
+signal_symbol = "⚡"
+
+
+[sudo]
+disabled = false
+symbol = "👑 "
+format = "[$symbol]($style)"
+style = "bold yellow"
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false
+
+[aws]
+symbol = "  "
+
+[buf]
+format = "via [$symbol]($style)"
+symbol = ""
+
+[c]
+symbol = ""
+
+[cmake]
+format = "via [$symbol]($style)"
+
+[cobol]
+format = "via [$symbol]($style)"
+
+[conda]
+symbol = " "
+
+[crystal]
+format = "via [$symbol]($style)"
+
+[daml]
+format = "via [$symbol]($style)"
+
+[dart]
+format = "via [$symbol]($style)"
+symbol = ""
+
+[deno]
+format = "via [$symbol]($style)"
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[dotnet]
+format = "[$symbol(🎯 $tfm )]($style)"
+
+[elixir]
+format = 'via [$symbol]($style)'
+symbol = " "
+
+[elm]
+format = 'via [$symbol]($style)'
+symbol = " "
+
+[erlang]
+format = 'via [$symbol]($style)'
+
+[git_branch]
+symbol = " "
+
+[golang]
+format = 'via [$symbol]($style)'
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[helm]
+format = 'via [$symbol]($style)'
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+format = 'via [$symbol]($style)'
+
+[kotlin]
+format = 'via [$symbol]($style)'
+
+[lua]
+format = 'via [$symbol]($style)'
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+format = 'via [$symbol]($style)'
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+format = 'via [$symbol]($style)'
+
+[ocaml]
+format = 'via [$symbol(\($switch_indicator$switch_name\) )]($style)'
+
+[package]
+symbol = " "
+disabled = true
+
+[perl]
+format = 'via [$symbol]($style)'
+
+[php]
+format = 'via [$symbol]($style)'
+
+[pulumi]
+format = 'via [$symbol$stack]($style)'
+
+[purescript]
+format = 'via [$symbol]($style)'
+
+[python]
+format = 'via [$symbol]($style)'
+symbol = " "
+
+[raku]
+format = 'via [$symbol]($style)'
+
+[red]
+format = 'via [$symbol]($style)'
+
+[rlang]
+format = 'via [$symbol]($style)'
+
+[ruby]
+format = 'via [$symbol]($style)'
+
+[spack]
+symbol = "🅢 "
+
+[rust]
+symbol = " "
+format = 'via [$symbol]($style)'
+
+[swift]
+format = 'via [$symbol]($style)'
+
+[vagrant]
+format = 'via [$symbol]($style)'
+
+[vlang]
+format = 'via [$symbol]($style)'
+
+[zig]
+format = 'via [$symbol]($style)'
