@@ -12,6 +12,7 @@
   ];
 
   home.stateVersion = "23.05";
+  home.file."./.config/" = { source = ./.config; recursive = true;}; 
 
   programs.home-manager = {
     enable = true;
