@@ -20,6 +20,10 @@
 
   home.packages = with pkgs; [
     eww-wayland
+    bash
+    jq
+    socat
+    python3
     tmux
     dunst
     wcm
