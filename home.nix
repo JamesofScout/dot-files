@@ -10,6 +10,7 @@
     ./editor/intelij.nix
     ./editor/emacs.nix
     ./editor/codium.nix
+    ./editor/nvim.nix
   ];
 
   home.stateVersion = "23.05";
