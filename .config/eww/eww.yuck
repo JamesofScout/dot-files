@@ -12,7 +12,7 @@
 	   :exclusive true
   (workspaces))
 
-(defwindow powermenu
+(defwindow dashboard
   :monitor 0
   :stacking "fg"
   :windowtype "normal"
