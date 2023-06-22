@@ -14,7 +14,11 @@
   ];
 
   home.stateVersion = "23.05";
-  home.file."./.config/" = { source = ./.config; recursive = true;}; 
+  home.file."./.config/" = {
+    source = ./.config;
+    recursive = true;
+    onChange = "${pkgs.eww-wayland}/bin/eww reload\n ${pkgs.hyprland}/bin/hyprctl reload";
+  }; 
 
   programs.home-manager = {
     enable = true;
@@ -38,6 +42,7 @@
   # programs.thunderbird.enable = true;
 
   programs.fish.enable=true;
+  programs.fish.loginShellInit="${pkgs.hyprland}/bin/Hyprland";
   programs.fish.interactiveShellInit="starship init fish | source";
   home.shellAliases = {
     ls = "lsd";
