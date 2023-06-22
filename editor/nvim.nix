@@ -1,5 +1,8 @@
 {pkgs, config, ...} : {
-  home.packages = with pkgs; [
-    neovim
-  ];  
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    plugins = with pkgs.vimPlugins; [ {plugin = nvchad;} ];
+  };  
 }
