@@ -26,6 +26,7 @@
 
   home.packages = with pkgs; [
     eww-wayland
+    dolphin
     bash
     jq
     socat
