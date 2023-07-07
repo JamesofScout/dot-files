@@ -56,7 +56,7 @@
     Install.WantedBy=["default.target"];
     Service = {
       Restart="always";
-      ExecStart = "${pkgs.kanata}/bin/kanata --cfg /home/florian/.config/home-manager/kanata.kbd";
+      ExecStart = "${pkgs.kanata}/bin/kanata --cfg /home/florian/.config/kanata.kbd";
     };
   };
 }
