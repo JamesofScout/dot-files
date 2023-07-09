@@ -25,8 +25,8 @@
   };
 
   home.packages = with pkgs; [
+    cinnamon.nemo
     eww-wayland
-    dolphin
     bash
     jq
     socat

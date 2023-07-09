@@ -22,5 +22,8 @@
   cap (tap-hold-press 200 200 sldr lctl)
 )
 
-(defseq ä (" a))
-(defseq Ä (" A))
+(defseq @ä (' a))
+(defseq @ü (' u))
+
+(deffakekeys @ä (macro (unicode ä)))
+(deffakekeys @ü (macro (unicode ü)))
