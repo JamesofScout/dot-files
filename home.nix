@@ -26,6 +26,7 @@
 
   home.packages = with pkgs; [
     cinnamon.nemo
+    onlyoffice-bin
     eww-wayland
     bash
     jq

@@ -24,6 +24,10 @@
 
 (defseq @ä (' a))
 (defseq @ü (' u))
+(defseq @ö (' o))
+(defseq @s (s s))
 
 (deffakekeys @ä (macro (unicode ä)))
 (deffakekeys @ü (macro (unicode ü)))
+(deffakekeys @ö (macro (unicode ö)))
+(deffakekeys @s (macro (unicode ß)))
