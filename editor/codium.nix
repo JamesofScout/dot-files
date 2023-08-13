@@ -7,5 +7,8 @@
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
     ];
+    userSettings = {
+      "editor.fontLigatures" = true;
+    };
   };
 }
