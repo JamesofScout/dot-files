@@ -1,5 +1,5 @@
 
-{ config, pkgs, services, ...} : {
+{ config, pkgs, services, stylix, ...} : {
   home.username = "florian";
   home.homeDirectory = "/home/florian";
   nixpkgs.config = {
@@ -11,6 +11,7 @@
     ./editor/emacs.nix
     ./editor/codium.nix
     ./editor/nvim.nix
+    ./theme.nix
   ];
 
   home.stateVersion = "23.05";
@@ -45,7 +46,6 @@
 
   programs.fish.enable=true;
   programs.fish.loginShellInit="${pkgs.hyprland}/bin/Hyprland";
-  programs.fish.interactiveShellInit="starship init fish | source";
   home.shellAliases = {
     ls = "lsd";
     gs = "git status";
