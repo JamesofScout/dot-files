@@ -35,7 +35,6 @@
     python3
     tmux
     dunst
-    wcm
     waybar
     btop
     alacritty
