@@ -43,6 +43,26 @@
 
   # programs.thunderbird.enable = true;
 
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      daemonize = true;
+      clock = true;
+      ignore-empty-password = true;
+    };
+  };
+
+  services.swayidle = {
+    enable = true;
+    events = [
+      { event = "lock"; command = "${pkgs.swaylock}/bin/swaylock";}
+      { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock";}
+    ];
+    timeouts = [
+      { timeout = 600; command = "${pkgs.swaylock}/bin/swaylock";}
+    ];
+  };
+
   programs.fish.enable=true;
   programs.fish.loginShellInit="${pkgs.hyprland}/bin/Hyprland";
   home.shellAliases = {
