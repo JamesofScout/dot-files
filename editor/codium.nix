@@ -9,6 +9,8 @@
     ];
     userSettings = {
       "editor.fontLigatures" = true;
+      "git.confirmSync" = false;
+      "terminal.integrated.fontLigatures" = true;      
     };
   };
 }
