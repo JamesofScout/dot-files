@@ -18,7 +18,7 @@
   home.file."./.config/" = {
     source = ./.config;
     recursive = true;
-    onChange = "${pkgs.eww-wayland}/bin/eww reload\n ${pkgs.hyprland}/bin/hyprctl reload";
+    # onChange = "${pkgs.eww-wayland}/bin/eww reload\n ${pkgs.hyprland}/bin/hyprctl reload";
   }; 
 
   programs.home-manager = {
@@ -26,7 +26,6 @@
   };
 
   home.packages = with pkgs; [
-    cinnamon.nemo
     onlyoffice-bin
     eww-wayland
     bash
@@ -37,7 +36,6 @@
     dunst
     waybar
     btop
-    alacritty
     kanata
   ];
 
@@ -45,26 +43,27 @@
 
   programs.swaylock = {
     enable = true;
-    settings = {
-      daemonize = true;
-      clock = true;
-      ignore-empty-password = true;
-    };
+    # settings = {
+    #   daemonize = true;
+    #   clock = true;
+    #   ignore-empty-password = true;
+    # };
   };
 
-  services.swayidle = {
-    enable = true;
-    events = [
-      { event = "lock"; command = "${pkgs.swaylock}/bin/swaylock";}
-      { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock";}
-    ];
-    timeouts = [
-      { timeout = 600; command = "${pkgs.swaylock}/bin/swaylock";}
-    ];
-  };
+  # services.swayidle = {
+  #   systemdTarget = "hyprland-session.target";
+  #   enable = true;
+  #   events = [
+  #     { event = "lock"; command = "${pkgs.swaylock}/bin/swaylock";}
+  #     { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock";}
+  #   ];
+  #   timeouts = [
+  #     { timeout = 20; command = "${pkgs.swaylock}/bin/swaylock -fF";}
+  #   ];
+  # };
 
   programs.fish.enable=true;
-  programs.fish.loginShellInit="${pkgs.hyprland}/bin/Hyprland";
+  # programs.fish.loginShellInit="${pkgs.hyprland}/bin/Hyprland";
   home.shellAliases = {
     ls = "lsd";
     gs = "git status";

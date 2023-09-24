@@ -11,4 +11,5 @@
     ];});
       name = "FiraCode Nerd Font Mono";
     };
+  stylix.targets.kitty.enable = true;
 }
