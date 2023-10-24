@@ -9,7 +9,10 @@
     userSettings = {
       "editor.fontLigatures" = true;
       "git.confirmSync" = false;
-      "terminal.integrated.fontLigatures" = true;      
+      "terminal.integrated.fontLigatures" = true;
+      "[xml]"= {
+        "editor.defaultFormatter"= "redhat.vscode-xml";
+      };
     };
   };
 }
